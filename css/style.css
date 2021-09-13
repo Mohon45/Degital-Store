@@ -14,7 +14,11 @@ body {
   justify-content: center;
 }
 .single-product {
-  height: 450px;
+  background-color: #f1f1f1;
+  margin: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  height: 540px;
   padding: 10px;
   transition: 0.6s;
 }
@@ -27,6 +31,13 @@ body {
   width: 150px;
   height: 150px;
 }
+.ratings {
+  color: #ffcf00;
+}
+.price {
+  color: #f57224;
+}
+
 .cart {
   width: 350px;
   /* border: 1px solid green; */

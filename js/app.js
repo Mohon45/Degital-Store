@@ -21,11 +21,11 @@ const showProducts = (products) => {
       </div>
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
-      <h4>Rating: (${rate})</h4>
-      <h4>Rating Count: (${rateCount})</h4>
-      <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+      <h4>Rating: (<span class="ratings">${rate}</span>)</h4>
+      <h4>Rating Count: (<span class="ratings">${rateCount}</span>)</h4>
+      <h2 class="price">Price: $ ${product.price}</h2>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn btn-danger text-white px-4">add to cart</button>
+      <button id="details-btn" class="btn btn-info text-white px-3">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
@@ -82,7 +82,7 @@ const updateTotal = () => {
   const grandTotal =
     getInputValue("price") + getInputValue("delivery-charge") +
     getInputValue("total-tax");
-  document.getElementById("total").innerText = grandTotal;
+  document.getElementById("total").innerText = grandTotal.toFixed(2);
 };
 
 // Api load Function Call
